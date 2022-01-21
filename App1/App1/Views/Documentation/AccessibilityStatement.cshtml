@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-Do List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css"/>
+
+    <!-- our accessibility statement  -->
+
+</head>
+<body>
+
+<h2>Thanks for using our To-Do list!</h2>
+<h5>
+    If you have any issues, please contact us
+    <span>
+        <button type="button" class="btn btn-link" onclick="@("window.location.href='" + Url.Action("contact", "Documentation") + "'");">Here</button>
+    </span>
+</h5>
+<div>
+    <h5>Our Accessibility Statement:</h5>
+
+    <p>https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website</p>
+
+</div>
+</body>
+</html>

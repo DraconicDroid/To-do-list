@@ -1,2 +1,3 @@
-# To-do-list
-An in progress colaborative work between me and classmates
+# to-do-list
+
+Welcome to To-do list.

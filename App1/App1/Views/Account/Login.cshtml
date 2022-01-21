@@ -1,0 +1,93 @@
+﻿@model Login
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-Do List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css"/>
+
+</head>
+<body>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="align-middle">
+        <hr/>
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+        <div class="format">
+            @Html.LabelFor(model => model.LoginName, new
+            {
+                @class =
+                    "control-label col-md-5"
+            })
+            <div class="align-middle">
+                @Html.EditorFor(model => model.LoginName, new
+                {
+                    htmlAttributes = new
+                    {
+                        @class = "form-control"
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.LoginName, "", new
+                {
+                    @class =
+                        "text-danger"
+                })
+            </div>
+        </div>
+
+        <div class="format">
+            @Html.LabelFor(model => model.Password, new
+            {
+                @class =
+                    "control-label col-md-5"
+            })
+            <div class="align-middle">
+                @Html.EditorFor(model => model.Password, new
+                {
+                    htmlAttributes = new
+                    {
+                        @class = "form-control"
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.Password, "", new
+                {
+                    @class =
+                        "text-danger"
+                })
+            </div>
+        </div>
+        <div class="form-group format">
+            <div class="checkbox">
+                <label asp-for="RememberMe">
+                    <input asp-for="RememberMe"/>
+                    @Html.DisplayNameFor(m => m.RememberMe)
+                </label>
+            </div>
+        </div>
+        <div class="format">
+            <div class="align-middle" style="margin-top: 5%">
+
+                <button type="button" class="btn home" onclick="">Login</button> <!--Add auth and password hash stuff-->
+
+                <!--<asp:Button id="Button1"
+                                type="submit"
+                                value="Login"
+                                class="btn btn-default"
+                                Text="Login"
+                                OnClick="SubmitBtn_Click"
+                                runat="server"/>-->
+
+            </div>
+        </div>
+    </div>
+}
+</body>
+</html>

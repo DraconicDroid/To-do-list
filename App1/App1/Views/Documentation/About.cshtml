@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-Do List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css"/>
+
+<!-- add how to use the program here -->
+    
+</head>
+<body>
+
+<h2>Thanks for using our To-Do list!</h2>
+<h5>If you have any issues, please contact us <span> <button type="button" class="btn btn-link" onclick="@("window.location.href='" + @Url.Action("contact", "Documentation") + "'");">Here</button> </span></h5>
+<div>
+    <h5>This To-Do this is a WIP project based of a c# asp.net web application. We had to use a database for a login page and the to-do list itself and cshtml for the webpage.</h5>
+    <h2>How to use the App</h2>
+
+    <h3>Home Page</h3>
+    <h5>The first page loaded. It has options to login and register (these are covered lower down), featured images and a change-log. There is also a Nav bar which will allow you to navigate to any page (you used it to find this).</h5>
+    
+    <h3>Login Page</h3>
+    <h5>For registered users, enter your username and passowrd and if it matches a known account, you will be able to access the app</h5>
+    
+    <h3>Register Page</h3>
+    <h5>For new users, simply enter a username, passowrd and valid email account and you will be able to use the app. Next time, log in using the username and password for easy access</h5>
+    
+    <h3>To Do Page</h3>
+    <h5>The actual list itself **UNDER CONSTRUCTION - WILL UPDATE WHEN COMPLETE**</h5>
+    
+    <h3>Contact Page</h3>
+    <h5>If you have any issues, this page contains information on how to contact us.</h5>
+    
+    <h3>Change Log Page</h3>
+    <h5>Shows any changes made to the app.</h5>
+    
+</div>
+</body>
+</html>
